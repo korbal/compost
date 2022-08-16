@@ -1,5 +1,5 @@
 <template>
-  init 
+  init 2
 </template>
 
 <script>
