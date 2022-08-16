@@ -1,9 +1,7 @@
 <template>
   
   <SearchBar />
-  <Footer />
-
-
+  
 </template>
 
 <script>
