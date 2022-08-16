@@ -10,7 +10,10 @@ npm run build
 cd dist
 
 # if you are deploying to a custom domain
-echo 'canicompostit.com' > CNAME
+################################################################
+###############################################################
+# enable this once refactoring done and point the domain to this repo
+# echo 'canicompostit.com' > CNAME
 
 git init
 git add -A
@@ -25,7 +28,7 @@ git commit -m "deploy"
 #############################################################
 #############################################################
 # Rewrite the following lines to match your GitHub repository
-# git push -f git@github.com:korbal/compo.git main:gh-pages
+git push -f git@github.com:korbal/compost.git main:gh-pages
 
 # pushing to main at the same time to keep the deployment and repo in sync
 #git push origin main
