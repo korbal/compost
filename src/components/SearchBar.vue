@@ -2,7 +2,7 @@
    <input
      type="text"
      v-model="input"
-     placeholder="Search fruits..." />
+     placeholder="start typing..." />
   <div
     class="item fruit"
     v-for="fruit in filteredList()"
