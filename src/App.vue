@@ -19,7 +19,7 @@
           <p></p>
         </div>
         <div class="flex-item item-two">
-          <p></p>
+          <p>version 0.22 (2022-08-18)</p>
         </div>
         
       </div>
@@ -98,8 +98,8 @@ section {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    justify-content: stretch;
-    font-size: 20px;
+    justify-content: center;
+    font-size: 12px;
     font-weight: bold;
     color: white;
     
