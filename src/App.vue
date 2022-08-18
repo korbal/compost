@@ -1,6 +1,6 @@
 <template>
 
-<div class=""></div>
+
 <router-view />
 
 </template>
@@ -29,5 +29,4 @@ body {
 
 
 </style>
-
 

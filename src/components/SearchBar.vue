@@ -1,21 +1,36 @@
- <template>
-   <input type="text" v-model="input" placeholder="Search fruits..." />
-  <div class="item fruit" v-for="fruit in filteredList()" :key="fruit" v-show="input.length !=0">
+<template>
+   <input
+     type="text"
+     v-model="input"
+     placeholder="Search fruits..." />
+  <div
+    class="item fruit"
+    v-for="fruit in filteredList()"
+    :key="fruit"
+    v-show="input.length !=0"
+    >
     <p>{{ fruit }}</p>
   </div>
-  <div class="item error" v-if="input&&!filteredList().length">
+  <div
+    class="item error"
+    v-if="input&&!filteredList().length">
      <p>No results found!</p>
   </div>
+
 </template>
 
 
-
 <script setup>
+import { onBeforeMount, ref } from "vue";
 
-import { ref } from "vue";
 let input = ref("");
+let fruits = [];
 
-const fruits = ["apple", "banana", "orange"];
+//let itemList = ref([]);
+
+onBeforeMount(() => {
+  getData();
+});
 
 function filteredList() {
   return fruits.filter((fruit) =>
@@ -24,6 +39,16 @@ function filteredList() {
 }
 
 
+async function getData() {
+ const res = await fetch("https://script.google.com/macros/s/AKfycbw43aEKD9O-LhXZWcz-FYZ4a-wVf-wtnbK4vsjPzDXV6Ym6xevDvQMmZPv9NOODfjIGZg/exec");
+ const json = await res.json();
+  
+  for (const element of json.items) {
+    fruits.push(element.name);
+  }
+
+}
+
 
 </script>
 
@@ -31,15 +56,21 @@ function filteredList() {
 
 
 
-
-
-
-
 <style>
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
 
+body {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: rgb(234, 242, 255);
+}
 
 input {
   display: block;
@@ -50,7 +81,7 @@ input {
   background-size: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -73,6 +104,4 @@ input {
 .error {
   background-color: tomato;
 }
-
-
 </style>
