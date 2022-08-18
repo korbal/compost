@@ -1,7 +1,49 @@
 <template>
+  <section id="sec-two">
+    <div class="container">
+      <div class="row">
+        
+        <div class="flex-item item-two">
+          <img src="./assets/cici-logo.png" alt="" class="logo">
+        </div>
+        
+      </div>
+    </div>
+  </section>
 
+  <section id="sec-two">
+    <div class="container">
+      <div class="row find-out">
+        
+        <div class="flex-item item-two">
+          <p></p>
+        </div>
+        <div class="flex-item item-two">
+          <p></p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
 
-<router-view />
+  <section id="sec-three">
+    <div class="container">
+      <div class="row">
+        <div class="flex-item item-one">
+          <p></p>
+        </div>
+        <div class="flex-item item-two searchbox">
+           
+           <!--This is the searchbox-->
+          <router-view />
+
+        </div>
+        <div class="flex-item item-three">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </template>
 
@@ -27,6 +69,44 @@ body {
   height: 100vh;
 }
 
+section {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.find-out {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: stretch;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    
+}
+.searchbox {
+  margin-top: 30px;
+}
 
 </style>
 

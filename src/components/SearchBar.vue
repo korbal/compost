@@ -2,7 +2,8 @@
    <input
      type="text"
      v-model="input"
-     placeholder="start typing..." />
+     @input="input = $event.target.value"
+     placeholder="start typing to find out..." />
   <div
     class="item fruit"
     v-for="fruit in filteredList()"
@@ -21,8 +22,9 @@
 
 
 <script setup>
-import { onBeforeMount, ref } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
 
+// TODO: rename fruits[] here to items and accordingly in the template
 let input = ref("");
 let fruits = [];
 
@@ -32,12 +34,19 @@ onBeforeMount(() => {
   getData();
 });
 
+onMounted(() => {
+  focusOnSearch();
+});
+
 function filteredList() {
   return fruits.filter((fruit) =>
     fruit.toLowerCase().includes(input.value.toLowerCase())
   );
 }
 
+function focusOnSearch() {
+ document.querySelector("input").focus();
+}
 
 async function getData() {
  const res = await fetch("https://script.google.com/macros/s/AKfycbw43aEKD9O-LhXZWcz-FYZ4a-wVf-wtnbK4vsjPzDXV6Ym6xevDvQMmZPv9NOODfjIGZg/exec");
