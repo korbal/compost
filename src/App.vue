@@ -22,7 +22,7 @@
           <p></p>
         </div>
         <div class="flex-item item-two">
-          <p>version 0.22 (2022-08-18)</p>
+          <p>version 0.23 (updated: 2022-08-19)</p>
         </div>
         
       </div>
