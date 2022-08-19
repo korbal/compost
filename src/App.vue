@@ -4,7 +4,10 @@
       <div class="row">
         
         <div class="flex-item item-two">
+          
+          <router-link :to="{name: 'Home'}"> 
           <img src="./assets/cici-logo.png" alt="" class="logo">
+          </router-link>
         </div>
         
       </div>

@@ -1,32 +1,47 @@
 <template>
    <input
-     type="text"
      v-model="input"
      @input="input = $event.target.value"
-     placeholder="start typing to find out..." />
+     placeholder="start typing to find out..."
+     type="text"
+   />
   <div
-    class="item fruit"
-    v-for="fruit in filteredList()"
-    :key="fruit"
     v-show="input.length !=0"
+    v-for="item in filteredList()"
+    :key="item.id"
+    class="item-bg item-class"
+  >
+    <router-link
+      :to="{
+        name: 'ItemDetails',
+        params: {
+          item: item,
+          id: item.id,
+          name: item.name,
+          isCompostable: item.isCompostable,
+          description: item.description,
+          // TODO: something is not right with image. wtf
+          //image: image.image_url
+        }
+      }"
     >
-    <p>{{ fruit }}</p>
+      <p>{{ item.name }}</p>
+    </router-link>
   </div>
   <div
-    class="item error"
-    v-if="input&&!filteredList().length">
+    v-if="input&&!filteredList().length"
+    class="item-bg error"
+  >
      <p>No results found!</p>
   </div>
 
 </template>
 
-
 <script setup>
 import { onBeforeMount, onMounted, ref } from "vue";
 
-// TODO: rename fruits[] here to items and accordingly in the template
 let input = ref("");
-let fruits = [];
+let items = [];
 
 //let itemList = ref([]);
 
@@ -39,8 +54,8 @@ onMounted(() => {
 });
 
 function filteredList() {
-  return fruits.filter((fruit) =>
-    fruit.toLowerCase().includes(input.value.toLowerCase())
+  return items.filter((item) =>
+    item.name.toLowerCase().includes(input.value.toLowerCase())
   );
 }
 
@@ -53,9 +68,9 @@ async function getData() {
  const json = await res.json();
   
   for (const element of json.items) {
-    fruits.push(element.name);
+    items.push(element);
   }
-
+  
 }
 
 
@@ -90,12 +105,12 @@ input {
   background-size: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.item {
+.item-bg {
   width: 350px;
   margin: 0 auto 10px auto;
   padding: 10px 20px;
@@ -105,9 +120,16 @@ input {
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-.fruit {
-  background-color: rgb(97, 62, 252);
+.item-class {
+  /* background-color: rgb(97, 62, 252); */
+  background-color: #5aab49;
   cursor: pointer;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 .error {
