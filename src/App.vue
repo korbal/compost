@@ -1,52 +1,39 @@
 <template>
-  <section id="sec-two">
+
+<!-- HEADER START -->
+  <section id="header">
     <div class="container">
-      <div class="row">
-        
-        <div class="flex-item item-two">
-          
+      
+      <div class="logo">
           <router-link :to="{name: 'Home'}"> 
           <img src="./assets/cici-logo.png" alt="" class="logo">
           </router-link>
-        </div>
-        
-      </div>
+
+       <div class="version">
+          version 0.23 (updated: 2022-08-19)
+       </div>
+       </div>
+      
     </div>
   </section>
+<!-- HEADER END -->
 
-  <section id="sec-two">
+<!--CONTENT START -->
+<section id="content">
     <div class="container">
-      <div class="row find-out">
-        
-        <div class="flex-item item-two">
-          <p></p>
-        </div>
-        <div class="flex-item item-two">
-          <p>version 0.23 (updated: 2022-08-19)</p>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <section id="sec-three">
-    <div class="container">
-      <div class="row">
-        <div class="flex-item item-one">
-          <p></p>
-        </div>
-        <div class="flex-item item-two searchbox">
-           
-           <!--This is the searchbox-->
+       <!--This is the searchbox-->
           <router-view />
-
-        </div>
-        <div class="flex-item item-three">
-          <p></p>
-        </div>
-      </div>
     </div>
   </section>
+<!--CONTENT END -->
+
+<!-- FOOTER START -->
+  <section id="footer">
+    <div class="container">
+      
+    </div>
+  </section>
+<!--FOOTER END -->
 
 </template>
 
@@ -72,43 +59,37 @@ body {
   height: 100vh;
 }
 
-section {
-    display: flex;
-}
+
 
 .container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px; 
+   
 }
 
-.row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-around;
+.container .logo {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  
+
 }
 
-.logo {
-    width: 80%;
-    height: 80%;
-    margin: 0 auto;
+.version {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.find-out {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    
-}
-.searchbox {
-  margin-top: 30px;
+@media (max-width: 768px) {
+  .container .logo {
+    height: 80px;
+  }
+  
 }
 
 </style>

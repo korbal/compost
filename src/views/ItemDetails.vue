@@ -1,9 +1,12 @@
 <template>
  
-<h2>Can you put</h2> 
- <h3> {{$attrs.name}} </h3>
-<h2>in the compost bin?</h2>
-<h4> {{$attrs.isCompostable}} </h4>
+<div class="answer">{{$attrs.isCompostable}}</div>
+<h2> you can put</h2> 
+<div class="item"> {{$attrs.name}}</div>
+<h2>in the compost bin.</h2>
+<!-- <p class="description">
+  {{$attrs.description}}
+</p> -->
 
 </template>
 
@@ -22,28 +25,49 @@ const props = defineProps(['item']);
 <!-----------STYLE--------------->
 <style>
 
-h2{
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  margin: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h3{
+.answer {
   color: #5aab49;
   background-color: #e7e22a;
-  padding: 10px;
+  padding: 10px 20px;
+  margin-top: 40px;
   border-radius: 10px;
   text-align: center;
+  font-weight: bold;
+  font-size: 60px;
 }
 
-h4{
+.item{
   color: white;
   background-color: #01885d;
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 10px;
+  text-align: center;
+  margin: 0px;
+  font-size: 40px;
+}
+
+h2{
+  font-size: 40px;
+  color: white;
   text-align: center;
   margin: 20px;
 }
+
+/* TODO: apply style to description and add description */
+/* .desciption {
+  color: white;
+  text-align: center;
+  margin: 50px;
+  font-size: 500px;
+  
+} */
+
 
 </style>

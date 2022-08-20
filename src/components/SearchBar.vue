@@ -1,5 +1,6 @@
 <template>
    <input
+    id="searchbox"
      v-model="input"
      @input="input = $event.target.value"
      placeholder="start typing to find out..."
@@ -72,12 +73,7 @@ async function getData() {
   }
   
 }
-
-
 </script>
-
-
-
 
 
 <style>
@@ -134,5 +130,9 @@ a {
 
 .error {
   background-color: tomato;
+}
+
+#searchbox {
+  margin-top: 100px;
 }
 </style>
