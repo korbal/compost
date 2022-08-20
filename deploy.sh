@@ -9,9 +9,13 @@ cd src
 
 mv fasz.js fasz_backup.js
 
+mv fasz_deploy.js fasz_deploy_backup.js
+
 mv fasz_deploy.js fasz.js
 
 mv fasz_backup.js fasz.js
+
+mv fasz_deploy_backup.js mv fasz_deploy.js
 
 cd ..
 
