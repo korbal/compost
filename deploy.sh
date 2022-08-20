@@ -3,6 +3,19 @@
 # abort on errors
 set -e
 
+# swap dev main.js with deploy main js for deploy and set back to dev so google analytics won't measure local time
+
+cd src
+
+mv fasz.js fasz_backup.js
+
+mv fasz_deploy.js fasz.js
+
+mv fasz_backup.js fasz.js
+
+cd ..
+
+
 # build
 npm run build
 
