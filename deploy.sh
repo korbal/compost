@@ -55,8 +55,7 @@ git push -f git@github.com:korbal/compost.git main:gh-pages
 ##################
 
 # Navigating back to src to set dev config back
-
-cd src
+cd ../src
 
 # Setting Development config live after deploy
 mv main_backup.js main.js
