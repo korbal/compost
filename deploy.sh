@@ -49,6 +49,11 @@ git commit -m "deploy"
 # Rewrite the following lines to match your GitHub repository
 git push -f git@github.com:korbal/compost.git main:gh-pages
 
+cd..
+cd src
+
+echo 'current path is '$PWD
+
 sleep 5s # wait for github to update
 
 echo 'is this echoed? '
@@ -59,8 +64,7 @@ echo 'is this echoed? '
 # DEPLOY DONE    #
 ##################
 
-cd..
-cd src
+
 
 echo 'Im in src yay'
 
