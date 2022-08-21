@@ -14,6 +14,8 @@ cp main_deploy.js main_deploy_backup.js
 # Setting Deploy config live
 mv main_deploy.js main.js
 
+echo 'current path is '$PWD
+
 ################## 
 # DEPLOYING      #
 ##################

@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+echo 'current path is '$PWD
+
+cd src
+
 # Setting Development config live after deploy
 mv main_backup.js main.js
 
