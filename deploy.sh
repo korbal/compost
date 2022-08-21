@@ -54,14 +54,7 @@ git push -f git@github.com:korbal/compost.git main:gh-pages
 # DEPLOY DONE    #
 ##################
 
-# Navigating back to src to set dev config back
-cd ../src
-
-# Setting Development config live after deploy
-mv main_backup.js main.js
-
-# Recreating original state for main_deploy file backup.
-mv main_deploy_backup.js main_deploy.js
+/bin/bash -c "cd src && mv main_backup.js main.js && mv main_deploy_backup.js main_deploy.js"
 
 echo 'deploy succesful'
 cd -
