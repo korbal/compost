@@ -49,30 +49,9 @@ git commit -m "deploy"
 # Rewrite the following lines to match your GitHub repository
 git push -f git@github.com:korbal/compost.git main:gh-pages
 
-cd..
-cd src
-
-echo 'current path is '$PWD
-
-sleep 5s # wait for github to update
-
-echo 'is this echoed? '
-# pushing to main at the same time to keep the deployment and repo in sync
-#git push origin main
 
 ##################
 # DEPLOY DONE    #
 ##################
 
-
-
-echo 'Im in src yay'
-
-# Setting Development config live after deploy
-mv main_backup.js main.js
-
-# Recreating original state for main_deploy file backup.
-mv main_deploy_backup.js main_deploy.js
-echo 'deploy succesful'
 cd -
-$SHELL
