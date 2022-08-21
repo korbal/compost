@@ -54,7 +54,7 @@ git push -f git@github.com:korbal/compost.git main:gh-pages
 # DEPLOY DONE    #
 ##################
 
-/bin/bash -c "cd src && mv main_backup.js main.js && mv main_deploy_backup.js main_deploy.js"
+/bin/bash -c rename_backups.sh
 
 echo 'deploy succesful'
 cd -
