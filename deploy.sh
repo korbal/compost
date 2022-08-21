@@ -7,18 +7,18 @@ set -e
 
 cd src
 
-mv fasz.js fasz_backup.js
+# Creating backups for config files
+cp main.js main_backup.js
+cp main_deploy.js main_deploy_backup.js
 
-mv fasz_deploy.js fasz_deploy_backup.js
+# Setting Deploy config live
+mv main_deploy.js main.js
 
-mv fasz_deploy.js fasz.js
-
-mv fasz_backup.js fasz.js
-
-mv fasz_deploy_backup.js mv fasz_deploy.js
+################## 
+# DEPLOYING      #
+##################
 
 cd ..
-
 
 # build
 npm run build
@@ -50,4 +50,20 @@ git push -f git@github.com:korbal/compost.git main:gh-pages
 # pushing to main at the same time to keep the deployment and repo in sync
 #git push origin main
 
+##################
+# DEPLOY DONE    #
+##################
+
+# Navigating back to src to set dev config back
+cd ..
+cd src
+
+# Setting Development config live after deploy
+mv main_backup.js main.js
+
+# Recreating original state for main_deploy file backup
+mv main_deploy_backup.js main_deploy.js
+
+echo 'deploy succesful'
 cd -
+$SHELL

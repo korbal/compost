@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "deploy": "git add . && git commit -m 'deploy' && git push origin master && deploy.sh && gh-pages -d dist",
     "backup": "git add . && git commit -m 'backup' && git push origin master",
-    "local": "vue-cli-service serve --port 3000"
+    "local": "vue-cli-service serve --port 3000",
+    "depgeci": "depfasz.sh"
   },
   "homepage": "http://canicompostit.com",
   "dependencies": {

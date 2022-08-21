@@ -10,7 +10,7 @@
           </router-link>
 
        <div class="version">
-          version 0.24 (updated: 2022-08-20)
+          version 0.25 (updated: 2022-08-21)
        </div>
        </div>
       
