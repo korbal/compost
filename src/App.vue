@@ -30,7 +30,12 @@
 <!-- FOOTER START -->
   <section id="footer">
     <div class="container">
-      
+      <div class="footer">
+        <div class="about">About</div>
+        <div class="suggest">Suggest Item</div>
+        <div class="suggest">Share!</div>
+        
+      </div>
     </div>
   </section>
 <!--FOOTER END -->
@@ -66,6 +71,26 @@ body {
     margin: 0 auto;
     padding: 0 20px; 
    
+}
+
+.container .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin-top: 30px; */
+  color: white;
+  
+}
+
+.container .footer div {
+  display: flex;
+  
+  justify-content: space-around;
+  margin-top: 30px;
+  color: white;
+  margin-left:0px;
+  padding: 50px 50px
+  
 }
 
 .container .logo {

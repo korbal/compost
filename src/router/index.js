@@ -15,7 +15,7 @@ const routes = [
     component: About
   },
   {
-    path: '/item/:name',
+    path: '/:name',
     name: 'ItemDetails',
     component: ItemDetails,
     props: true

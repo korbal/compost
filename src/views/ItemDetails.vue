@@ -1,12 +1,16 @@
 <template>
  
 <div class="answer">{{$attrs.isCompostable}}</div>
-<h2> you can put</h2> 
+
+<h2 v-if="$attrs.isCompostable === 'yes'">you can throw</h2>
+<h2 v-else-if="$attrs.isCompostable === 'no'">you can't throw</h2>
+<h2 v-else>You probably can't throw</h2>
+
 <div class="item"> {{$attrs.name}}</div>
 <h2>in the compost bin.</h2>
-<!-- <p class="description">
+<p class="description">
   {{$attrs.description}}
-</p> -->
+</p>
 
 </template>
 
@@ -41,6 +45,7 @@ const props = defineProps(['item']);
   text-align: center;
   font-weight: bold;
   font-size: 60px;
+  text-transform: uppercase;
 }
 
 .item{
@@ -51,6 +56,11 @@ const props = defineProps(['item']);
   text-align: center;
   margin: 0px;
   font-size: 40px;
+}
+
+.description {
+  color: white;
+  margin-block: 30px;
 }
 
 h2{
