@@ -87,7 +87,8 @@ async function getData() {
 }
 
 body {
-  padding: 20px;
+  padding: 0;
+  padding-top: 20px;
   min-height: 100vh;
   background-color: rgb(234, 242, 255);
 }
@@ -95,7 +96,7 @@ body {
 input {
   display: block;
   width: 350px;
-  margin: 20px auto;
+  margin: 20px;
   padding: 10px 45px;
   background: white url("../assets/search-icon.svg") no-repeat 15px center;
   background-size: 15px 15px;
@@ -134,5 +135,6 @@ a {
 
 #searchbox {
   margin-top: 100px;
+  
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
 
+
 <!-- HEADER START -->
   <section id="header">
     <div class="container">
@@ -8,6 +9,7 @@
           <router-link :to="{name: 'Home'}"> 
           <img src="./assets/cici-logo.png" alt="" class="logo">
           </router-link>
+
 
        <div class="version">
           version 0.27 (updated: 2022-08-22)
@@ -28,16 +30,34 @@
 <!--CONTENT END -->
 
 <!-- FOOTER START -->
-  <section id="footer">
-    <div class="container">
-      <div class="footer">
-        <div class="about">About</div>
-        <div class="suggest">Suggest Item</div>
-        <div class="suggest">Share!</div>
-        
-      </div>
+
+<footer>
+  <div class="container2">
+      <ul class="flex-row">
+        <li><a href="#">Search</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Help us!</a></li>
+      </ul>
+      <ul class="flex-row">
+        <li>
+          <fa :icon="['fab', 'facebook']"  />          
+        </li>
+        <li>
+          <fa :icon="['fab', 'pinterest']"  />          
+        </li>
+        <li>
+          <fa :icon="['fab', 'instagram']"  />          
+        </li>
+        <li>
+          <fa :icon="['fab', 'twitter']"  />          
+        </li>
+      </ul>
+      <p class="copy">&copy; 2022 CanICompostIt.com</p>
     </div>
-  </section>
+</footer>
+  
+    
+  
 <!--FOOTER END -->
 
 </template>
@@ -68,6 +88,7 @@ body {
 
 .container {
     max-width: 1100px;
+    width: 90%;
     margin: 0 auto;
     padding: 0 20px; 
    
@@ -79,27 +100,30 @@ body {
   justify-content: space-between;
   /* margin-top: 30px; */
   color: white;
+  /* fixing footer on the bottom. 
+  position: fixed;
+  bottom: 100px; */
   
 }
 
-.container .footer div {
+/* .container .footer div {
   display: flex;
-  
+  flex-grow: 1;
   justify-content: space-around;
   margin-top: 30px;
   color: white;
   margin-left:0px;
   padding: 50px 50px
   
-}
+} */
+
 
 .container .logo {
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  
+  height: 40px;
 
 }
 
@@ -110,12 +134,77 @@ body {
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .container .logo {
+
+footer {
+  color: white;
+  background-color: #01885d;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  
+
+}
+
+/* footer .container2 {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+
+     max-width: 1100px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+
+  } */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul{
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+
+footer  li{
+    padding: 0 15px;
+    margin-bottom: 16px;
+  }
+
+footer a {
+  font-size: 14px;
+  font-weight: bold;
+  color: white
+}
+
+.svg-inline--fa {
+  cursor: pointer;
+  font-size: 20px;
+  
+}
+
+.copy {text-align: center;
+font-size: 10px;
+}
+
+@media (max-height: 620px ) {
+  /* .container .logo {
     height: 80px;
+  } */
+
+  footer{
+    /* position: relative; */
+    display: none;
   }
   
 }
+
+
 
 </style>
 
