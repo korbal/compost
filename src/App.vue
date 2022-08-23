@@ -12,7 +12,7 @@
 
 
        <div class="version">
-          version 0.27 (updated: 2022-08-22)
+          version 0.30 (updated: 2022-08-23)
        </div>
        </div>
       
@@ -89,8 +89,10 @@ body {
 .container {
     max-width: 1100px;
     width: 90%;
-    margin: 0 auto;
-    padding: 0 20px; 
+    margin:  auto;
+    padding: 0 20px;
+
+    
    
 }
 
