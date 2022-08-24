@@ -33,7 +33,20 @@
     v-if="input&&!filteredList().length"
     class="item-bg error"
   >
-     <p>No results found!</p>
+
+
+  <router-link
+      :to="{
+        name: 'Suggest',
+        params: {
+          itemToSuggest: input,
+        }
+      }"
+    >
+      <p>No results found! Tap to suggest...</p>
+    </router-link>
+
+    
   </div>
 
 </template>

@@ -1,5 +1,6 @@
 <template>
- 
+
+
 <div class="answer">{{$attrs.isCompostable}}</div>
 
 <h2 v-if="$attrs.isCompostable === 'yes'">you can throw</h2>
@@ -12,12 +13,17 @@
   {{$attrs.description}}
 </p>
 
+<h2>
+  <router-link to="/">Search again? </router-link>
+</h2>
+
 </template>
 
 
 
 <!-----------SCRIPT-------------->
 
+// TODO: for some fucking reason, props are not accepted in the script setup. I used the $attrs instead, which i have no idea what they are. refactor for proper props
 <script setup>
 import { defineProps } from "@vue/runtime-core";
 

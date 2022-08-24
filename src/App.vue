@@ -34,9 +34,9 @@
 <footer>
   <div class="container2">
       <ul class="flex-row">
-        <li><a href="#">Search</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Help us!</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/suggest">Help us!</a></li>
       </ul>
       <ul class="flex-row">
         <li>
