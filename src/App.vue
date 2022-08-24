@@ -12,7 +12,7 @@
 
 
        <div class="version">
-          version 0.30 (updated: 2022-08-23)
+          version 0.40 (updated: 2022-08-24)
        </div>
        </div>
       
