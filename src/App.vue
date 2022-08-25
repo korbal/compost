@@ -12,7 +12,7 @@
 
 
        <div class="version">
-          version 0.40 (updated: 2022-08-24)
+          version 0.50 (updated: 2022-08-25)
        </div>
        </div>
       
@@ -40,16 +40,16 @@
       </ul>
       <ul class="flex-row">
         <li>
-          <fa :icon="['fab', 'facebook']"  />          
+          <fa @click="shareFacebook()" :icon="['fab', 'facebook']"  />          
         </li>
         <li>
-          <fa :icon="['fab', 'pinterest']"  />          
+          <fa @click="sharePinterest()" :icon="['fab', 'pinterest']"  />          
         </li>
+        <!-- <li>
+          <fa @click="shareInstagram()" :icon="['fab', 'instagram']"  />          
+        </li> -->
         <li>
-          <fa :icon="['fab', 'instagram']"  />          
-        </li>
-        <li>
-          <fa :icon="['fab', 'twitter']"  />          
+          <fa @click="shareTwitter()" :icon="['fab', 'twitter']"  />          
         </li>
       </ul>
       <p class="copy">&copy; 2022 CanICompostIt.com</p>
@@ -63,7 +63,62 @@
 </template>
 
 
+<!-- SCRIPT START -->
+<script setup>
 
+
+
+// TODO: refactor hardcoded values based on this https://www.youtube.com/watch?v=OfLvQ8KtW2g
+
+const shareFacebook = () => {
+  window.open(
+    "https://www.facebook.com/sharer.php?u=" +
+      'canicompostit.com',
+    "sharer",
+    "toolbar=0,status=0,width=626,height=436"
+  );
+  return false;
+}
+
+// TODO: rewrite request coz copy does not go through
+const sharePinterest = () => {
+  window.open(
+    "https://pinterest.com/pin/create/bookmarklet/?media=" +
+      'canicompostit.com/img/carrots_small.3a2d84b8.jpg' +
+      "&url=" +
+      'canicompostit.com' +
+      "&description=" +
+      'The fastest way to find out if you can throw something in the compost bin',
+    "sharer",
+    "toolbar=0,status=0,width=626,height=436"
+  );
+  return false;
+}
+
+const shareTwitter = () => {
+  window.open(
+    "https://twitter.com/share?url=" +
+      'canicompostit.com' +
+      "&text=" +
+      'The fastest way to find out if you can throw something in the compost bin -->',
+    "sharer",
+    "toolbar=0,status=0,width=626,height=436"
+  );
+  return false;
+}
+
+// TODO: instagram share does not work. I hid it in the template for now coz it's complicated as cunt
+const shareInstagram = () => {
+  window.open(
+    "https://www.instagram.com/accounts/login/?next=%2Faccounts%2Fedit%2F&source=auth_switcher",
+    "sharer",
+    "toolbar=0,status=0,width=626,height=436"
+  );
+  return false;
+}
+
+</script>
+<!-- SCRIPT END -->
 
 <style>
 
@@ -188,11 +243,14 @@ footer a {
   cursor: pointer;
   font-size: 20px;
   
+  
 }
 
 .copy {text-align: center;
 font-size: 10px;
 }
+
+
 
 @media (max-height: 620px ) {
   /* .container .logo {

@@ -79,6 +79,7 @@ function focusOnSearch() {
 
 async function getData() {
  const res = await fetch("https://script.google.com/macros/s/AKfycbw43aEKD9O-LhXZWcz-FYZ4a-wVf-wtnbK4vsjPzDXV6Ym6xevDvQMmZPv9NOODfjIGZg/exec");
+  // const res = await fetch(process.env.VUE_APP_API);
  const json = await res.json();
   
   for (const element of json.items) {
