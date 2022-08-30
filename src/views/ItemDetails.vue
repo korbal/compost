@@ -11,9 +11,19 @@
     {{ $attrs.description }}
   </p>
 
-  <h2>
-    <router-link to="/">Search again? </router-link>
-  </h2>
+  <h3>
+    <a href="https://ot-ev-ot-nyelv.ck.page/afd869e9c0
+">Want to improve your compost quality?</a>
+  </h3>
+
+  <br />
+  <br />
+  <p>
+    <router-link to="/">Search again </router-link>
+  </p>
+
+ 
+  
 </template>
 
 <!-----------SCRIPT-------------->
