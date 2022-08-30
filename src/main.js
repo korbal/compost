@@ -23,6 +23,6 @@ library.add(fas, fab)
 // import VueGtag from "vue-gtag";
 // createApp(App).use(VueGtag, { config: { id: "G-LX4H5N8Z0Y" } }).use(VueGtag, { config: { id: "UA-3450053-63" } }).use(router).mount("#app");
 
-// disable this if you want to use google analytics
+// disable this if you want to use google analytics.
 createApp(App).use(router).component('fa', FontAwesomeIcon).mount("#app");
 
