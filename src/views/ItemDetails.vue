@@ -1,40 +1,33 @@
 <template>
+  <div class="answer">{{ $attrs.isCompostable }}</div>
 
+  <h2 v-if="$attrs.isCompostable === 'yes'">you can throw</h2>
+  <h2 v-else-if="$attrs.isCompostable === 'no'">you can't throw</h2>
+  <h2 v-else>You probably can't throw</h2>
 
-<div class="answer">{{$attrs.isCompostable}}</div>
+  <div class="item">{{ $attrs.name }}</div>
+  <h2>in the compost bin.</h2>
+  <p class="description">
+    {{ $attrs.description }}
+  </p>
 
-<h2 v-if="$attrs.isCompostable === 'yes'">you can throw</h2>
-<h2 v-else-if="$attrs.isCompostable === 'no'">you can't throw</h2>
-<h2 v-else>You probably can't throw</h2>
-
-<div class="item"> {{$attrs.name}}</div>
-<h2>in the compost bin.</h2>
-<p class="description">
-  {{$attrs.description}}
-</p>
-
-<h2>
-  <router-link to="/">Search again? </router-link>
-</h2>
-
+  <h2>
+    <router-link to="/">Search again? </router-link>
+  </h2>
 </template>
-
-
 
 <!-----------SCRIPT-------------->
 
-// TODO: for some fucking reason, props are not accepted in the script setup. I used the $attrs instead, which i have no idea what they are. refactor for proper props
+// TODO: for some fucking reason, props are not accepted in the script setup. I used the
+$attrs instead, which i have no idea what they are. refactor for proper props
 <script setup>
 import { defineProps } from "@vue/runtime-core";
 
-const props = defineProps(['item']);
-
+const props = defineProps(["item"]);
 </script>
-
 
 <!-----------STYLE--------------->
 <style>
-
 .container {
   display: flex;
   flex-direction: column;
@@ -54,7 +47,7 @@ const props = defineProps(['item']);
   text-transform: uppercase;
 }
 
-.item{
+.item {
   color: white;
   background-color: #01885d;
   padding: 10px 20px;
@@ -69,7 +62,7 @@ const props = defineProps(['item']);
   margin-block: 30px;
 }
 
-h2{
+h2 {
   font-size: 40px;
   color: white;
   text-align: center;
@@ -84,6 +77,4 @@ h2{
   font-size: 500px;
   
 } */
-
-
 </style>
