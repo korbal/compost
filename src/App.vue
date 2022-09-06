@@ -14,7 +14,7 @@
 
 
        <div class="version">
-          version 0.60 (updated: 2022-08-30)
+          version 0.65 (updated: 2022-09-06)
        </div>
        </div>
       
@@ -26,6 +26,7 @@
 <section id="content">
     <div class="container">
        <!--This is the searchbox-->
+       
           <router-view />
     </div>
   </section>

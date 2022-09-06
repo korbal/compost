@@ -12,22 +12,25 @@
     :key="item.id"
     class="item-bg item-class"
   >
-    <router-link
-      :to="{
-        name: 'ItemDetails',
-        params: {
-          item: item,
-          id: item.id,
-          name: item.name,
-          isCompostable: item.isCompostable,
-          description: item.description,
-          // TODO: something is not right with image. wtf
-          //image: image.image_url
-        }
-      }"
-    >
-      <p>{{ item.name }}</p>
-    </router-link>
+    
+    
+      <router-link
+        :to="{
+          name: 'ItemDetails',
+          params: {
+            item: item,
+            id: item.id,
+            name: item.name,
+            isCompostable: item.isCompostable,
+            description: item.description,
+            // TODO: something is not right with image. wtf
+            //image: image.image_url
+          }
+        }"
+      >
+        <p>{{ item.name }}</p>
+      </router-link>
+    
   </div>
   <div
     v-if="input&&!filteredList().length"

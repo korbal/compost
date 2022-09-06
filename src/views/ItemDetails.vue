@@ -1,14 +1,19 @@
 <template>
   <div class="answer">{{ $attrs.isCompostable }}</div>
 
-  <h2 v-if="$attrs.isCompostable === 'yes'">you can throw</h2>
-  <h2 v-else-if="$attrs.isCompostable === 'no'">you can't throw</h2>
+  <h2 v-if="$attrs.isCompostable === 'YES 🎉'">you can throw</h2>
+  <h2 v-else-if="$attrs.isCompostable === 'NO ✋🏼'">you can't throw</h2>
   <h2 v-else>You probably can't throw</h2>
 
   <div class="item">{{ $attrs.name }}</div>
-  <h2>in the compost bin.</h2>
-  <p class="description">
+  <h2>in the compost bin.<br>⬇️</h2>
+  <!-- <p class="description">
     {{ $attrs.description }}
+  </p> -->
+
+<!-- TODO: create on the fly url generation, so users can click through generic class without the searchbox init -->
+  <p class="description">
+    <span v-html="$attrs.description"></span>
   </p>
 
   <!-- <h3>
@@ -70,6 +75,7 @@ const props = defineProps(["item"]);
 .description {
   color: white;
   margin-block: 30px;
+  font-size: 20px;
 }
 
 h2 {
@@ -87,4 +93,7 @@ h2 {
   font-size: 500px;
   
 } */
+a {color: #e7e22a;
+text-decoration:underline ;
+}
 </style>
