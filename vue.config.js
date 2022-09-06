@@ -7,7 +7,7 @@
 //}
 
 
-//to deploy on github pages I need to use this otherwise 404.
+//to deploy on github pages I need to use this otherwise 404
 module.exports = {
   publicPath: '/'
 }
