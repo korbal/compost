@@ -30,4 +30,8 @@ export default {
   margin-top: 20px;
   font-size: 20px;
 }
+a {
+  color: blue;
+  text-decoration: underline;
+}
 </style>
