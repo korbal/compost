@@ -14,6 +14,6 @@
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? 'canicompostit.com/' // note the trailing slash
+    ? '/' // note the trailing slash
     : '/',
 }
