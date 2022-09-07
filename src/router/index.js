@@ -50,18 +50,18 @@ const routes = [
 ]
 
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
-
-
 // const router = createRouter({
-//   history: createWebHistory(),
-//   routes: [
-//     // put your routes
-//   ]
-// });
+//   history: createWebHistory(process.env.BASE_URL),
+//   routes
+// })
+
+
+const router = createRouter({
+  history: createWebHistory('/compost/'),
+  routes: [
+    // put your routes
+  ]
+});
 
 
 export default router
