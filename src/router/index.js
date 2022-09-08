@@ -57,7 +57,7 @@ const router = createRouter({
 
 
 // const router = createRouter({
-//   history: createWebHistory(),
+//   history: createWebHistory('/compost/'),
 //   routes: [
 //     // put your routes
 //   ]

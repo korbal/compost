@@ -37,9 +37,13 @@
 <footer>
   <div class="container2">
       <ul class="flex-row">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/suggest">Help us!</a></li>
+        <li><router-link :to="{name: 'Home'}">Home</router-link> </li>
+        <li><router-link :to="{name: 'About'}">About</router-link> </li>
+        <li><router-link :to="{name: 'Suggest'}">Help us!</router-link> </li>
+        
+        
+        <!-- <a href="/about">About</a></li> -->
+        <!-- <li><a href="/suggest">Help us!</a></li> -->
       </ul>
       <ul class="flex-row">
         <li>
