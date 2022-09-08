@@ -14,7 +14,7 @@
 
 
        <div class="version">
-          version 0.66 (updated: 2022-09-07)
+          version 0.7 (updated: 2022-09-08)
        </div>
        </div>
       
@@ -41,9 +41,6 @@
         <li><router-link :to="{name: 'About'}">About</router-link> </li>
         <li><router-link :to="{name: 'Suggest'}">Help us!</router-link> </li>
         
-        
-        <!-- <a href="/about">About</a></li> -->
-        <!-- <li><a href="/suggest">Help us!</a></li> -->
       </ul>
       <ul class="flex-row">
         <li>
