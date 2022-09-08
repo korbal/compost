@@ -6,12 +6,12 @@
   <h2 v-else>You probably can't throw</h2>
 
   <div class="item">{{ $attrs.name }}</div>
-  <h2>in the compost bin.<br>⬇️</h2>
+  <h2>in the compost bin.<br />⬇️</h2>
   <!-- <p class="description">
     {{ $attrs.description }}
   </p> -->
 
-<!-- TODO: create on the fly url generation, so users can click through generic class without the searchbox init -->
+  <!-- TODO: create on the fly url generation, so users can click through generic class without the searchbox init -->
   <p class="description">
     <span v-html="$attrs.description"></span>
   </p>
@@ -26,9 +26,6 @@
   <p>
     <router-link to="/">Search again </router-link>
   </p>
-
- 
-  
 </template>
 
 <!-----------SCRIPT-------------->
@@ -93,7 +90,8 @@ h2 {
   font-size: 500px;
   
 } */
-a {color: #e7e22a;
-text-decoration:underline ;
+a {
+  color: #e7e22a;
+  text-decoration: underline;
 }
 </style>
