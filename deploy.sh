@@ -14,7 +14,6 @@ cp main_deploy.js main_deploy_backup.js
 # Setting Deploy config live
 mv main_deploy.js main.js
 
-echo 'current path is '$PWD
 
 ################## 
 # DEPLOYING      #
@@ -43,9 +42,7 @@ git commit -m "deploy"
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 
-#############################################################
-#############################################################
-#############################################################
+
 # Rewrite the following lines to match your GitHub repository
 git push -f git@github.com:korbal/compost.git main:gh-pages
 
