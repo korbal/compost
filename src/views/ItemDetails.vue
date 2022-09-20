@@ -39,7 +39,11 @@ const props = defineProps(["item"]);
 </script>
 
 <!-----------STYLE--------------->
-<style scoped>
+
+
+
+<style scoped >
+
 .container {
   display: flex;
   flex-direction: column;
@@ -50,19 +54,19 @@ const props = defineProps(["item"]);
 .answer {
   color: #5aab49;
   background-color: #e7e22a;
-  padding: 10px 20px;
-  margin-top: 40px;
+  padding: 5px 20px;
+  margin-top: 30px;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 30px;
   text-transform: uppercase;
 }
 
 .item {
   color: white;
   background-color: #01885d;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 10px;
   text-align: center;
   margin: 0px;
@@ -71,12 +75,13 @@ const props = defineProps(["item"]);
 
 .description {
   color: white;
-  margin-block: 30px;
+  /* margin-block: 30px; */
+  margin-top: 0px;
   font-size: 20px;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 25px;
   color: white;
   text-align: center;
   margin: 20px;
@@ -94,4 +99,6 @@ a {
   color: #e7e22a;
   text-decoration: underline;
 }
+
+
 </style>

@@ -113,6 +113,7 @@ const shareInstagram = () => {
   font-family: "Montserrat", sans-serif;
 }
 
+
 body {
   padding: 20px;
   min-height: 100vh;
@@ -127,7 +128,7 @@ body {
   max-width: 1100px;
   width: 90%;
   margin: auto;
-  padding: 0 20px;
+  padding: 0px 20px;
 }
 
 .container .footer {
@@ -170,7 +171,8 @@ body {
 footer {
   color: white;
   background-color: #01885d;
-  padding: 10px 20px;
+  padding: 10px 200px;
+  margin: 0px -20px;
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -222,10 +224,13 @@ footer a {
   font-size: 10px;
 }
 
-@media (max-height: 620px) {
+@media (max-width: 480px) {
   /* .container .logo {
     height: 80px;
   } */
+  body {
+    overflow-y: scroll;
+  }
 
   footer {
     /* position: relative; */

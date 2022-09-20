@@ -126,7 +126,7 @@ input {
 
 .item-bg {
   width: 350px;
-  margin: 0 auto 10px auto;
+  margin: 0 5px 5px 0px;
   padding: 10px 20px;
   color: white;
   border-radius: 5px;
