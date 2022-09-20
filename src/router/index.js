@@ -4,6 +4,7 @@ import About from '../views/About.vue'
 import ItemDetails from '../views/ItemDetails.vue'
 import Suggest from '../views/Suggest.vue'
 import SuggestThanks from '../views/SuggestThanks.vue'
+import Testers from '../views/Testers.vue'
 
 const routes = [
   {
@@ -46,6 +47,11 @@ const routes = [
     name: 'SuggestThanks',
     component: SuggestThanks,
 
+  },
+  {
+    path: '/testers',
+    name: 'Testers',
+    component: Testers,
   },
 ]
 

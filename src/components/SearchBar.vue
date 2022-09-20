@@ -7,10 +7,11 @@
      type="text"
    />
   <div
+    
     v-show="input.length !=0"
     v-for="item in filteredList()"
     :key="item.id"
-    class="item-bg item-class"
+    class="item-class item-bg"
   >
     
     
@@ -69,6 +70,16 @@ onBeforeMount(() => {
 onMounted(() => {
   focusOnSearch();
 });
+
+// function changeColor(){
+//   if(isCompostable === 'YES 🎉'){
+//     return "green"
+//   } else if(isCompostable === 'NO ✋🏼'){
+//     return "red"
+//   } else {
+//     return "yellow"
+//   }
+// }
 
 function filteredList() {
   return items.filter((item) =>

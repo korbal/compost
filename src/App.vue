@@ -7,7 +7,7 @@
           <img src="./assets/cici-logo.png" alt="" class="logo" />
         </router-link>
 
-        <div class="version">version 0.8 (updated: 2022-09-20)</div>
+        <div class="version">version 0.81 (updated: 2022-09-20)</div>
       </div>
     </div>
   </section>
@@ -30,7 +30,8 @@
       <ul class="flex-row">
         <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
         <li><router-link :to="{ name: 'About' }">About</router-link></li>
-        <li><router-link :to="{ name: 'Suggest' }">Help us!</router-link></li>
+        <li><router-link :to="{ name: 'Suggest' }">Suggest an item</router-link></li>
+        <li><router-link :to="{ name: 'Testers' }">Help me test this app!</router-link></li>
       </ul>
       <ul class="flex-row">
         <li>
