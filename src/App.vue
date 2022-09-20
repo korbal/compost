@@ -7,7 +7,7 @@
           <img src="./assets/cici-logo.png" alt="" class="logo" />
         </router-link>
 
-        <div class="version">version 0.7 (updated: 2022-09-08)</div>
+        <div class="version">version 0.8 (updated: 2022-09-20)</div>
       </div>
     </div>
   </section>
