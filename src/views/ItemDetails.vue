@@ -13,7 +13,9 @@
 
   <!-- TODO: create on the fly url generation, so users can click through generic class without the searchbox init -->
   <p class="description">
-    <span v-html="$attrs.description"></span>
+    <span v-html="$attrs.description" ></span>
+    <!-- TODO: Enable this if reference column is filled with everything -->
+    <!-- <a :href="$attrs.reference" target="_blank"> reference</a> -->
   </p>
 
   <!-- <h3>

@@ -24,6 +24,9 @@
             name: item.name,
             isCompostable: item.isCompostable,
             description: item.description,
+            reference: item.reference,
+            category: item.category,
+            
             // TODO: something is not right with image. wtf
             //image: image.image_url
           }
@@ -92,8 +95,10 @@ function focusOnSearch() {
 }
 
 async function getData() {
- const res = await fetch("https://script.google.com/macros/s/AKfycbw43aEKD9O-LhXZWcz-FYZ4a-wVf-wtnbK4vsjPzDXV6Ym6xevDvQMmZPv9NOODfjIGZg/exec");
-  // const res = await fetch(process.env.VUE_APP_API);
+ 
+  const res = await fetch("https://script.google.com/macros/s/AKfycbylLKlTRlulUb0x9r9j2Wvxa5W64g49NOT9kOsXR-N6LiPRamqA/exec");
+ 
+  
  const json = await res.json();
   
   for (const element of json.items) {
