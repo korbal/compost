@@ -10,7 +10,7 @@
     "local": "vue-cli-service serve --port 3000",
     "depgeci": "depfasz.sh"
   },
-  "homepage": "https://korbal.github.io/compost",
+  "homepage": "http://canicompostit.com",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
