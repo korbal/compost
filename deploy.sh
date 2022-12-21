@@ -31,7 +31,7 @@ cd dist
 ################################################################
 ###############################################################
 # enable this once refactoring done and point the domain to this repo
-echo 'canicompostit.com' > CNAME
+# echo 'canicompostit.com' > CNAME
 
 git init
 git add -A
